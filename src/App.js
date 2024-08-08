@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld';
 import Phrase from './components/Phrase';
 import SayMyName from './components/SayMyName';
 import Person from './components/Person';
+import List from './components/List';
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
       <SayMyName name="Pedro"/>
       <SayMyName name={namePerson}/>
       <Person photo={url} name={namePerson} occupation={occupation} age={age}/>
+      <List/>
+      <List/>
     </div>
   );
 }
