@@ -30,6 +30,7 @@ function App() {
       <img src={url} alt="Imagem de uma caricatura de Ronaldinho Gaúcho" />
       <HelloWorld/>
       <Phrase/>
+      <Phrase/>
       <SayMyName name="Vinícius"/>
       <SayMyName name="Pedro"/>
       <SayMyName name={namePerson}/>
