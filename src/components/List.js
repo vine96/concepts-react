@@ -7,7 +7,9 @@ function List(){
         <ul>
             <li>Item 1</li>
             <li>Item 2</li>
-            <Item brand="Guaraná Fruki"/>
+            <Item brand="Renault Kwid" release_year={2020}/>
+            <Item brand="Jeep Renegade" release_year={2015}/>
+            <Item/>
         </ul>
         </>
     )
