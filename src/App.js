@@ -4,6 +4,8 @@ import Phrase from './components/Phrase';
 import SayMyName from './components/SayMyName';
 import Person from './components/Person';
 import List from './components/List';
+import Event from './components/Event';
+import Form from './components/Form';
 
 function App() {
 
@@ -21,6 +23,9 @@ function App() {
 
   return (
     <div className="App">
+      <Event number={1}/>
+      <Event number={2}/>
+      <Form/>
       <h1>Olá React!</h1>
       <p>Meu primeiro App</p>
       <h2>Alterando o JSX</h2>
