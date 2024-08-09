@@ -6,6 +6,7 @@ import Person from './components/Person';
 import List from './components/List';
 import Event from './components/Event';
 import Form from './components/Form';
+import Conditional from './components/Conditional';
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Renderização Condicional</h1>
+      <Conditional/>
       <Event/>
       <Form/>
       <h1>Olá React!</h1>
