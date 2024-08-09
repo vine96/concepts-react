@@ -23,8 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <Event number={1}/>
-      <Event number={2}/>
+      <Event/>
       <Form/>
       <h1>Olá React!</h1>
       <p>Meu primeiro App</p>
