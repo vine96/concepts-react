@@ -7,8 +7,11 @@ import List from './components/List';
 import Event from './components/Event';
 import Form from './components/Form';
 import Conditional from './components/Conditional';
+import OtherList from './components/OtherList';
 
 function App() {
+
+  const myItems = ['React', 'Vue', 'Angular'];
 
   const name = 'Vinícius'
   const newName = name.toLocaleUpperCase()
@@ -24,6 +27,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Renderização de Listas</h1>
+      <OtherList items={myItems}/>
+      <OtherList items={[]}/>
       <h1>Renderização Condicional</h1>
       <Conditional/>
       <Event/>
