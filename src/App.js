@@ -8,13 +8,14 @@ import Event from './components/Event';
 import Form from './components/Form';
 import Conditional from './components/Conditional';
 import OtherList from './components/OtherList';
+import YourName from './components/YourName';
+import Greeting from './components/Greeting';
+import { useState } from 'react';
 
 function App() {
 
   const myItems = ['React', 'Vue', 'Angular'];
-
-  const name = 'Vinícius'
-  const newName = name.toLocaleUpperCase()
+  const [name, setName] = useState()
 
   function sum(a, b) {
     return a + b
@@ -27,6 +28,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1>State Lift</h1>
+      <YourName setName={setName}/>
+      <Greeting name={name}/>
       <h1>Renderização de Listas</h1>
       <OtherList items={myItems}/>
       <OtherList items={[]}/>
@@ -37,8 +41,6 @@ function App() {
       <h1>Olá React!</h1>
       <p>Meu primeiro App</p>
       <h2>Alterando o JSX</h2>
-      <h3>O seu nome é: {name}</h3>
-      <h4>O seu nome em maiúsculo é: {newName}</h4>
       <p>Multiplicação: {2 * 2}</p>
       <p>Soma: {sum(1, 2)}</p>
       <img src={url} alt="Imagem de uma caricatura de Ronaldinho Gaúcho" />
