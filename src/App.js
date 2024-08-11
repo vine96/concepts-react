@@ -11,6 +11,12 @@ import OtherList from './components/OtherList';
 import YourName from './components/YourName';
 import Greeting from './components/Greeting';
 import { useState } from 'react';
+import Home from './pages/Home';
+import About from './pages/About';
+import Company from './pages/Company';
+import Navbar from './components/layouts/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/layouts/Footer';
 
 function App() {
 
@@ -28,31 +34,40 @@ function App() {
 
   return (
     <div className="App">
-      <h1>State Lift</h1>
-      <YourName setName={setName}/>
-      <Greeting name={name}/>
-      <h1>Renderização de Listas</h1>
-      <OtherList items={myItems}/>
-      <OtherList items={[]}/>
-      <h1>Renderização Condicional</h1>
-      <Conditional/>
-      <Event/>
-      <Form/>
-      <h1>Olá React!</h1>
-      <p>Meu primeiro App</p>
-      <h2>Alterando o JSX</h2>
-      <p>Multiplicação: {2 * 2}</p>
-      <p>Soma: {sum(1, 2)}</p>
-      <img src={url} alt="Imagem de uma caricatura de Ronaldinho Gaúcho" />
-      <HelloWorld/>
-      <Phrase/>
-      <Phrase/>
-      <SayMyName name="Vinícius"/>
-      <SayMyName name="Pedro"/>
-      <SayMyName name={namePerson}/>
-      <Person photo={url} name={namePerson} occupation={occupation} age={age}/>
-      <List/>
-      <List/>
+        <Router>
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/sobre" element={<About/>}/>
+            <Route path="/empresa" element={<Company/>}/>
+          </Routes>
+          <h1>State Lift</h1>
+          <YourName setName={setName}/>
+          <Greeting name={name}/>
+          <h1>Renderização de Listas</h1>
+          <OtherList items={myItems}/>
+          <OtherList items={[]}/>
+          <h1>Renderização Condicional</h1>
+          <Conditional/>
+          <Event/>
+          <Form/>
+          <h1>Olá React!</h1>
+          <p>Meu primeiro App</p>
+          <h2>Alterando o JSX</h2>
+          <p>Multiplicação: {2 * 2}</p>
+          <p>Soma: {sum(1, 2)}</p>
+          <img src={url} alt="Imagem de uma caricatura de Ronaldinho Gaúcho" />
+          <HelloWorld/>
+          <Phrase/>
+          <Phrase/>
+          <SayMyName name="Vinícius"/>
+          <SayMyName name="Pedro"/>
+          <SayMyName name={namePerson}/>
+          <Person photo={url} name={namePerson} occupation={occupation} age={age}/>
+          <List/>
+          <List/>
+          <Footer/>
+        </Router>
     </div>
   );
 }
