@@ -1,4 +1,4 @@
-# Curso em React abordando a como criar uma aplicação do zero voltada para listar os projetos.
+# Curso em React abordando como funciona o conceito e prática de cada componente, funcionalidade, entre outros.
 
 # Getting Started with Create React App
 
